@@ -4,6 +4,7 @@ import { Inter, Sora } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { Toaster as SonnerToaster } from "sonner"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" })
@@ -48,6 +49,17 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
           <Toaster />
+          <SonnerToaster
+            position="bottom-right"
+            toastOptions={{
+              style: {
+                background: "#0A0A0A",
+                border: "1px solid rgba(255,255,255,0.1)",
+                color: "#fff",
+                fontFamily: "monospace",
+              },
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

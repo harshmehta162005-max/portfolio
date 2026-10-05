@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Mail, MapPin, Send, MessageSquareCode, Github, Linkedin, Twitter } from "lucide-react"
+import { toast } from "sonner"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -46,8 +47,16 @@ export default function ContactSection() {
         throw new Error(result.error || "Transmission failed")
       }
     } catch (error) {
+      toast.error("Failed ❌ I have not received your message", {
+        description: "Something went wrong on our end. Please try again or email directly.",
+        style: {
+          background: "#1a0000",
+          border: "1px solid rgba(239,68,68,0.4)",
+          color: "#fca5a5",
+        },
+        duration: 6000,
+      })
       console.error("Contact form error:", error)
-      // We could use sonner here if preferred, but for now we'll stick to the UI feedback
     } finally {
       setIsSubmitting(false)
     }

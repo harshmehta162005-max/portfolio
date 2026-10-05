@@ -207,9 +207,9 @@ export default function SkillsSection() {
                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                 className="flex gap-8 whitespace-nowrap"
               >
-                {[...skillCategories, ...skillCategories].flatMap((cat) =>
+                {[...skillCategories, ...skillCategories].flatMap((cat, copyIdx) =>
                   cat.skills.map((skill, i) => (
-                    <span key={`${cat.title}-${i}`} className={`text-xs font-mono ${cat.accentClass} opacity-60`}>
+                    <span key={`${copyIdx}-${cat.title}-${i}`} className={`text-xs font-mono ${cat.accentClass} opacity-60`}>
                       {skill}
                     </span>
                   ))
