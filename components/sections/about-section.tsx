@@ -38,7 +38,7 @@ export default function AboutSection() {
             <BrainCircuit className="w-10 h-10 text-cyan-400 mb-6" />
             <h3 className="text-2xl font-bold mb-4 font-sora">Value Proposition</h3>
             <p className="text-lg text-white/80 leading-relaxed font-light">
-              Software Engineering student at IILM University (B.Tech CSE 2023–Present) with hands-on experience building full-stack, real-time, and AI-powered web applications. Proficient in React, Next.js, Node.js, MongoDB, and emerging AI tech like RAG, LangChain, and NLP.
+              Full-stack developer with hands-on experience building web applications and SaaS platforms end to end. Proficient in React, Next.js, Node.js, and Supabase, with a focus on clean architecture, scalable applications, and production-ready code. Currently pursuing B.Tech CSE at IILM University (2023–2027).
             </p>
             {/* Cyber hover effect */}
             <div className="absolute -inset-px bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>

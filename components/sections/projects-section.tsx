@@ -20,32 +20,34 @@ const projects = [
       { label: "Concurrent", value: "10k+" }
     ],
     aiNotes: "AI Content moderation system planned for v2.",
-    github: "https://github.com/harshmehta162005-max", // Generic for now
-    live: "#"
+    github: "https://github.com/harshmehta162005-max",
+    live: "#",
+    wip: false
   },
   {
     id: "creon",
     title: "CREON",
     tagline: "AI Creator Platform (CMS)",
-    tech: ["Next.js 15", "React 19", "Convex", "Clerk", "Shadcn", "React Quill"],
-    description: "Developed a full-stack AI-powered content management system for creators. Integrated rich text editing and AI-assisted workflows. Used Convex backend for real-time data synchronization.",
+    tech: ["Next.js 15", "React 19", "Convex", "Clerk Auth", "Shadcn UI", "Tailwind CSS"],
+    description: "Developed a full-stack AI-powered content management system for creators, including rich text editing and AI-assisted content workflows. Synchronized real-time data across the platform using a Convex backend. Implemented secure authentication and role-based access control (RBAC). Designed a scalable, clean UI using Shadcn UI and Tailwind CSS.",
     color: "from-pink-500 to-purple-600",
     shadow: "hover:shadow-[0_0_30px_rgba(255,0,122,0.2)]",
     border: "border-pink-500/30",
     metrics: [
       { label: "Sync", value: "Real-time" },
-      { label: "Auth", value: "Clerk JWT" }
+      { label: "Auth", value: "RBAC + Clerk" }
     ],
     aiNotes: "Utilizes LLMs for intelligent text generation and semantic content suggestions.",
     github: "https://github.com/harshmehta162005-max/creon",
-    live: "#"
+    live: "#",
+    wip: false
   },
   {
     id: "bethere",
     title: "BeThere",
-    tagline: "AI Event Management SaaS",
-    tech: ["Next.js 16", "React 19", "Tailwind CSS", "Convex", "Clerk Auth", "Shadcn"],
-    description: "Built an AI-driven SaaS platform for event creation and engagement. Implemented secure authentication and real-time backend features. Focused on scalability and clean component architecture.",
+    tagline: "Event Management SaaS",
+    tech: ["Next.js 16", "React 19", "Tailwind CSS", "Convex", "Clerk Auth", "Shadcn UI"],
+    description: "Built a SaaS platform for event creation, management, and user engagement. Implemented secure authentication and real-time backend features. Designed a production-ready SaaS UI optimized for performance and usability. Architected a scalable, clean component structure for long-term maintainability.",
     color: "from-lime-400 to-green-600",
     shadow: "hover:shadow-[0_0_30px_rgba(163,255,0,0.2)]",
     border: "border-lime-400/30",
@@ -55,7 +57,62 @@ const projects = [
     ],
     aiNotes: "AI-driven event recommendation engine based on user activity.",
     github: "https://github.com/harshmehta162005-max/be_there_final",
-    live: "https://betherefinal.vercel.app/"
+    live: "https://betherefinal.vercel.app/",
+    wip: false
+  },
+  {
+    id: "gymbot",
+    title: "GymWaBot",
+    tagline: "WhatsApp-Powered Gym Management Platform",
+    tech: ["React 18", "Node.js", "Express", "MongoDB", "WhatsApp Cloud API", "Google Gemini AI", "Razorpay", "TypeScript", "JWT", "node-cron"],
+    description: "A production-ready gym management platform with WhatsApp automation, geofenced attendance, and AI-powered reminders via Google Gemini. Gym owners get a full dashboard for member management, smart payments via Razorpay, and automated WhatsApp receipts & reminders in English, Hindi, or Hinglish.",
+    color: "from-orange-500 to-red-600",
+    shadow: "hover:shadow-[0_0_30px_rgba(249,115,22,0.2)]",
+    border: "border-orange-500/30",
+    metrics: [
+      { label: "WhatsApp Bot", value: "Live" },
+      { label: "AI", value: "Gemini" }
+    ],
+    aiNotes: "Google Gemini AI generates polite, personalized payment reminders in English, Hindi & Hinglish. Razorpay payment links are auto-embedded in each message.",
+    github: "https://github.com/harshmehta162005-max/gymBot",
+    live: "https://gym-hdgaaqo33-harsh-mehtas-projects-64ee88d3.vercel.app/",
+    wip: false
+  },
+  {
+    id: "agentx",
+    title: "AgentX",
+    tagline: "Autonomous AI Agent Framework",
+    tech: ["Python", "LangChain", "OpenAI API", "FastAPI", "React"],
+    description: "Developed an autonomous AI agent framework capable of executing complex multi-step tasks. AgentX leverages LLM-based reasoning with tool-use capabilities to plan, execute, and reflect on tasks autonomously without constant human supervision.",
+    color: "from-violet-500 to-indigo-600",
+    shadow: "hover:shadow-[0_0_30px_rgba(139,92,246,0.2)]",
+    border: "border-violet-500/30",
+    metrics: [
+      { label: "Type", value: "Agentic AI" },
+      { label: "Tools", value: "LangChain" }
+    ],
+    aiNotes: "Uses ReAct-style prompting with tool-calling loops for autonomous decision making.",
+    github: "https://github.com/harshmehta162005-max/AgentX",
+    live: "#",
+    wip: false
+  },
+  {
+    id: "domainforge",
+    title: "DomainForge",
+    tagline: "AI Domain Name Discovery & Availability Platform",
+    tech: ["Next.js 16", "React", "Tailwind CSS v4", "Supabase", "Groq", "Redis"],
+    description: "Built an AI-powered domain name discovery platform that generates brandable name suggestions via Groq LLM inference and validates availability in real time via ICANN-standard RDAP queries across 4+ TLDs (.com, .io, .ai, .dev) with 95%+ accuracy. Architected a multi-tier caching layer (Redis + Supabase, 5-minute TTLs), cutting redundant RDAP/LLM calls and delivering sub-3-second global response times. Implemented Supabase Row-Level Security (RLS) and secure authentication. Developed a context-aware AI assistant, automated domain-drop alerts (cron jobs + Resend), and trademark/social-handle risk screening.",
+    color: "from-violet-500 to-indigo-600",
+    shadow: "hover:shadow-[0_0_30px_rgba(139,92,246,0.2)]",
+    border: "border-violet-500/30",
+    metrics: [
+      { label: "Response", value: "<3s Global" },
+      { label: "Accuracy", value: "95%+ RDAP" }
+    ],
+    aiNotes: "Groq LLM inference generates brandable domain suggestions with trademark & social-handle risk screening across 4+ TLDs.",
+    github: "https://github.com/harshmehta162005-max",
+    live: "#",
+    wip: false
   }
 ]
 
@@ -96,8 +153,15 @@ export default function ProjectsSection() {
               
               <div className="flex justify-between items-start mb-4">
                 <motion.h3 layoutId={`title-${project.id}`} className="text-2xl font-bold font-sora">{project.title}</motion.h3>
-                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                  <Plus className="w-4 h-4" />
+                <div className="flex items-center gap-2">
+                  {project.wip && (
+                    <span className="flex items-center gap-1 px-2 py-1 text-xs font-mono rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/30 animate-pulse">
+                      🚧 WIP
+                    </span>
+                  )}
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                    <Plus className="w-4 h-4" />
+                  </div>
                 </div>
               </div>
               

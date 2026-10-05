@@ -2,49 +2,49 @@
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Briefcase, GraduationCap, Code, Rocket } from "lucide-react"
+import { Briefcase, GraduationCap, Code, Rocket, BrainCircuit } from "lucide-react"
 
 const timelineData = [
   {
     id: 1,
     type: "experience",
-    title: "Freelance Full Stack Web Developer",
-    organization: "Self-Employed",
-    date: "Aug 2023 – Present",
-    description: "Developed and deployed multiple full-stack web applications for clients, focusing on scalable architecture and responsive design. Integrated real-time features and secure payment gateways.",
-    icon: <Code className="w-5 h-5 text-cyan-400" />,
+    title: "Software Development Intern",
+    organization: "CityXsys",
+    date: "June 2026 – July 2026",
+    description: "Worked on SaaS-based web applications, contributing to the development and enhancement of application features. Contributed to frontend development and application workflows using modern web technologies. Worked with the development team on feature implementation, debugging, and improving application usability.",
+    icon: <Briefcase className="w-5 h-5 text-cyan-400" />,
     color: "cyan"
   },
   {
     id: 2,
-    type: "education",
-    title: "B.Tech Computer Science Engineering",
-    organization: "IILM University, Greater Noida",
-    date: "2023 – Present",
-    description: "Pursuing a comprehensive curriculum covering algorithms, data structures, full-stack development, and artificial intelligence. Active participant in coding hackathons.",
-    icon: <GraduationCap className="w-5 h-5 text-pink-500" />,
-    color: "pink"
+    type: "experience",
+    title: "Freelance Full Stack Web Developer",
+    organization: "Self-Employed",
+    date: "Aug 2023 – Present",
+    description: "Developed and deployed multiple full-stack web applications for clients, focusing on scalable architecture and responsive design. Integrated real-time features, AI-powered workflows, and secure payment gateways.",
+    icon: <Code className="w-5 h-5 text-purple-400" />,
+    color: "purple"
   },
   {
     id: 3,
     type: "experience",
-    title: "Project Lead: VIBEON & CREON",
-    organization: "Independent Development",
-    date: "2024",
-    description: "Architected and built two major platforms from scratch: a real-time social media application and an AI-powered content management system for creators.",
-    icon: <Rocket className="w-5 h-5 text-purple-500" />,
-    color: "purple"
+    title: "AI / NLP Intern",
+    organization: "YBI Foundation (Remote)",
+    date: "May 2025 – June 2025",
+    description: "Developed a Twitter sentiment-analysis project using NLP to analyze public sentiment trends, classifying real-time tweets into positive, negative, and neutral categories using machine learning models. Built foundational hands-on experience with Generative AI techniques.",
+    icon: <BrainCircuit className="w-5 h-5 text-orange-400" />,
+    color: "orange"
   },
   {
     id: 4,
     type: "education",
-    title: "Senior Secondary Education (PCM)",
-    organization: "Green Field School, Delhi",
-    date: "2022",
-    description: "Completed 12th grade with a strong foundation in Physics, Chemistry, and Mathematics. Scored 82%.",
-    icon: <GraduationCap className="w-5 h-5 text-lime-400" />,
-    color: "lime"
-  }
+    title: "B.Tech Computer Science Engineering",
+    organization: "IILM University, Greater Noida",
+    date: "2023 – 2027",
+    description: "Pursuing a comprehensive curriculum covering algorithms, data structures, full-stack development, and artificial intelligence. Active participant in coding hackathons and challenges (22-week DSA, GeeksforGeeks).",
+    icon: <GraduationCap className="w-5 h-5 text-pink-500" />,
+    color: "pink"
+  },
 ]
 
 export default function ExperienceSection() {

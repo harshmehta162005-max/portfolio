@@ -22,7 +22,6 @@ export default function Navigation() {
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Experience", href: "#experience", id: "experience" },
-    { name: "Reviews", href: "#testimonials", id: "testimonials" },
     { name: "Contact", href: "#contact", id: "contact" },
   ]
 
